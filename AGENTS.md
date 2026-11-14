@@ -1,5 +1,8 @@
 # Repository Guidelines
 
+
+**Agent budget (mandatory):** [shared task contract](https://github.com/saymer-alt/saymer-alt/blob/main/AGENT-TASK-CONTRACT.md) and [retry budget](https://github.com/saymer-alt/saymer-alt/blob/main/AGENT-RETRY-BUDGET.md). 2 identical FAIL -> change hypothesis/BLOCKED; 3 fix attempts OR 3 full heavy builds per blocker (whichever first) -> STOP, document evidence and ask owner GO. Never rerun unchanged PASS; safety checks remain mandatory.
+
 ## Project Structure & Module Organization
 - `crates/` hosts the Cargo workspace (shared core utilities, DNS codec, and client/server CLIs). Tests live in `crates/*/tests/`.
 - `docs/` contains design notes and protocol docs (for example, `docs/protocol.md`, `docs/dns-codec.md`).
